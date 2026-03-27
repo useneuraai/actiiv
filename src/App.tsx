@@ -64,13 +64,14 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 py-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center glass rounded-full py-4 px-8 mx-4 md:mx-auto flowy-bg border-white/5 shadow-2xl shadow-accent/5">
-        <motion.div 
+        <motion.a 
+          href="/"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-display font-bold italic tracking-tighter"
         >
           Actiiv
-        </motion.div>
+        </motion.a>
 
         {/* Desktop Nav */}
         <motion.div 
