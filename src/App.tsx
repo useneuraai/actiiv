@@ -19,6 +19,10 @@ import {
   Check
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import neuraaiImg from "../assets/neuraai.png";
+import sngschoolImg from "../assets/sngschool.png";
+import realestateImg from "../assets/realestate.png";
+import dentoImg from "../assets/dento.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -202,7 +206,7 @@ const Hero = () => {
 
 const About = () => {
   return (
-    <section id="about" className="py-20 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="about" className="scroll-mt-28 py-20 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -248,7 +252,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 md:py-32 bg-white/5">
+    <section id="skills" className="scroll-mt-28 py-20 md:py-32 bg-white/5">
       <div className="px-6 md:px-12 max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 md:mb-16 text-center">Our Toolkit</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -281,7 +285,7 @@ const Projects = () => {
       tag: "Full stack web app for AI agents",
       description: "A platform for building and deploying AI agents that can perform complex tasks across the web, using natural language prompts.",
       stack: "Node.js · TypeScript · Tailwind CSS",
-      image: "/assets/neuraai.png",
+      image: neuraaiImg,
       links: { live: "https://useneura.xyz"}
     },
     {
@@ -289,7 +293,7 @@ const Projects = () => {
       tag: "School Website",
       description: "A high-performance website for a local school, featuring dynamic content management and a modern design.",
       stack: "Wordpress · PHP · Elementor",
-      image: "/assets/sngschool.png",
+      image: sngschoolImg,
       links: { live: "https://sngmhskpm.wordpress.com/" }
     },
     {
@@ -297,7 +301,7 @@ const Projects = () => {
       tag: "Real Estate",
       description: "A sleek, responsive website for a real estate agency, showcasing property listings with advanced search and filtering capabilities.",
       stack: "Next.js · TypeScript · Firebase",
-      image: "/assets/realestate.png",
+      image: realestateImg,
       links: { live: "#"}
     },
     {
@@ -305,7 +309,7 @@ const Projects = () => {
       tag: "Dental Clinic Website",
       description: "A sleek, responsive website for a dental clinic, featuring patient testimonials and an easy-to-use appointment booking system.",
       stack: "Next.js · Supabase · Tailwind",
-      image: "/assets/dento.png",
+      image: dentoImg,
       links: { live: "https://dev-dentoclinic.pantheonsite.io/" }
     }
   ];
@@ -314,7 +318,7 @@ const Projects = () => {
   const marqueeProjects = [...projects, ...projects];
 
   return (
-    <section id="projects" className="py-20 md:py-32 overflow-hidden">
+    <section id="projects" className="scroll-mt-28 py-20 md:py-32 overflow-hidden">
       <div className="px-6 md:px-12 max-w-7xl mx-auto mb-16">
         <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Selected Works</h2>
         <p className="text-white/60 max-w-md">A collection of projects where we've pushed the boundaries of what's possible on the web.</p>
@@ -432,7 +436,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 md:py-32 bg-white/5">
+    <section id="pricing" className="scroll-mt-28 py-20 md:py-32 bg-white/5">
       <div className="px-6 md:px-12 max-w-7xl mx-auto">
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Simple, Transparent Pricing</h2>
@@ -546,7 +550,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="contact" className="scroll-mt-28 py-12 md:py-32 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="glass p-6 md:p-16 rounded-[24px] md:rounded-[40px] border-white/5 relative overflow-hidden">
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 rounded-full blur-[100px]" />
         
