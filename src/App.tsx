@@ -8,6 +8,7 @@ import {
   Github, 
   ExternalLink, 
   Mail, 
+  Instagram,
   Code2, 
   Database, 
   Layout, 
@@ -303,7 +304,7 @@ const Projects = () => {
       links: { live: "https://useneura.xyz"}
     },
     {
-      name: "Sree Narayana Guru School",
+      name: "Sree Narayana Guru Matric Hr Sec School",
       tag: "School Website",
       description: "A high-performance website for a local school, featuring dynamic content management and a modern design.",
       stack: "Wordpress · PHP · Elementor",
@@ -663,7 +664,7 @@ const Footer = () => {
         © 2026 Actiiv Agency. All rights reserved.
       </div>
       <div className="flex gap-6 text-white/40">
-        <a href="#" className="hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
+        <a href="https://www.instagram.com/actiivagency07/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
         <button 
           onClick={() => window.location.href = 'mailto:actiivagency07@gmail.com'}
           className="hover:text-white transition-colors bg-none border-none cursor-pointer p-0"
