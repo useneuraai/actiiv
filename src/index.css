@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-accent: #F27D26;
+  --color-bg: #050505;
+}
+
+@layer base {
+  html, body {
+    @apply bg-bg text-white font-sans selection:bg-accent selection:text-white;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow-x: hidden;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none !important; /* Chrome, Safari and Opera */
+  }
+
+  * {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60;
+}
+
+.glow-circle {
+  background: radial-gradient(circle, rgba(242, 125, 38, 0.4) 0%, rgba(242, 125, 38, 0) 70%);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes flowy-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.flowy-bg {
+  background: linear-gradient(-45deg, rgba(242, 125, 38, 0.1), rgba(5, 5, 5, 0.5), rgba(242, 125, 38, 0.05), rgba(5, 5, 5, 0.5));
+  background-size: 400% 400%;
+  animation: flowy-gradient 15s ease infinite;
+}
+
+.topo-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 1000 1000'%3E%3Cpath d='M0 100 Q 100 50, 200 100 T 400 100 T 600 100 T 800 100 T 1000 100 M0 200 Q 150 150, 300 200 T 600 200 T 900 200 T 1000 200 M0 300 Q 200 250, 400 300 T 800 300 T 1000 300 M0 400 Q 250 350, 500 400 T 1000 400 M0 500 Q 300 450, 600 500 T 1000 500 M0 600 Q 350 550, 700 600 T 1000 600 M0 700 Q 400 650, 800 700 T 1000 700 M0 800 Q 450 750, 900 800 T 1000 800 M0 900 Q 500 850, 1000 900' fill='none' stroke='rgba(255,255,255,0.02)' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 1000px 1000px;
+}
