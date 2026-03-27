@@ -12,6 +12,7 @@
   html, body {
     @apply bg-bg text-white font-sans selection:bg-accent selection:text-white;
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     overflow-x: hidden;

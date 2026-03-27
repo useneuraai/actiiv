@@ -2,7 +2,6 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
 import { motion, AnimatePresence } from "motion/react";
 import { 
   ArrowRight, 
@@ -18,7 +17,7 @@ import {
   X,
   Check
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import neuraaiImg from "../assets/neuraai.png";
 import sngschoolImg from "../assets/sngschool.png";
 import realestateImg from "../assets/realestate.png";
@@ -45,6 +44,21 @@ const Navbar = () => {
     { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const handleMobileNavClick = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    setIsOpen(false);
+    const targetId = href.replace("#", "");
+    const target = document.getElementById(targetId);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        window.history.pushState(null, "", href);
+      }, 120);
+    } else {
+      window.location.hash = href;
+    }
+  };
 
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 py-8">
@@ -109,7 +123,7 @@ const Navbar = () => {
                   key={link.name} 
                   href={link.href} 
                   className="text-xl font-display font-bold hover:text-accent transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleMobileNavClick(link.href)}
                 >
                   {link.name}
                 </a>
@@ -117,7 +131,7 @@ const Navbar = () => {
               <a 
                 href="#contact"
                 className="flex items-center justify-between bg-white text-black px-6 py-4 rounded-2xl font-bold"
-                onClick={() => setIsOpen(false)}
+                onClick={handleMobileNavClick("#contact")}
               >
                 Get in touch
                 <ArrowRight className="w-5 h-5" />
