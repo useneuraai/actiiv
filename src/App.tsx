@@ -147,7 +147,7 @@ const Navbar = () => {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto pt-32 pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto pt-20 pb-24 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] glow-circle -z-10 opacity-50" />
       <div className="absolute top-[20%] right-[10%] w-[200px] md:w-[400px] h-[200px] md:h-[400px] bg-accent/20 rounded-full blur-[80px] md:blur-[120px] -z-10" />
