@@ -303,7 +303,7 @@ const Projects = () => {
       links: { live: "https://useneura.xyz"}
     },
     {
-      name: "Sree Narayana Guru Matric Hr Sec School",
+      name: "Sree Narayana Guru School",
       tag: "School Website",
       description: "A high-performance website for a local school, featuring dynamic content management and a modern design.",
       stack: "Wordpress · PHP · Elementor",
