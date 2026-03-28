@@ -330,11 +330,8 @@ const Projects = () => {
     }
   ];
 
-  // Double the projects for a seamless loop
-  const marqueeProjects = [...projects, ...projects];
-
   return (
-    <section id="projects" className="scroll-mt-28 py-20 md:py-32 bg-white/5">
+    <section id="projects" className="scroll-mt-28 py-16 md:py-24 bg-white/5">
       <div className="px-6 md:px-12 max-w-7xl mx-auto">
         <div className="mb-14 max-w-3xl">
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.3em] text-accent mb-4">
@@ -346,7 +343,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((project, i) => (
             <motion.div
               key={project.name}
@@ -354,32 +351,32 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group overflow-hidden rounded-[32px] border border-white/10 bg-[#09090b]/80 shadow-2xl shadow-black/30"
+              className="group overflow-hidden rounded-[28px] border border-white/10 bg-[#09090b]/90 shadow-2xl shadow-black/20"
             >
-              <div className="relative overflow-hidden aspect-[16/10]">
+              <div className="relative overflow-hidden aspect-[4/3] sm:aspect-[16/10] bg-black">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="h-full w-full object-contain transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
                   <span className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-white/70">
                     {project.tag}
                   </span>
-                  <h3 className="mt-4 text-2xl font-semibold text-white">{project.name}</h3>
+                  <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-white">{project.name}</h3>
                 </div>
               </div>
 
-              <div className="p-8 space-y-5">
+              <div className="p-6 sm:p-8 space-y-5">
                 <p className="text-sm leading-relaxed text-white/70">{project.description}</p>
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">{project.stack}</span>
+                  <span className="text-[9px] uppercase tracking-[0.35em] text-white/40">{project.stack}</span>
                   <a
                     href={project.links.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] text-black transition hover:bg-accent/90"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-[11px] font-bold uppercase tracking-[0.2em] text-black transition hover:bg-accent/90"
                   >
                     View live
                     <ExternalLink className="w-3 h-3" />
@@ -685,7 +682,7 @@ const Footer = () => {
         © 2026 Actiiv Agency. All rights reserved.
       </div>
       <div className="flex gap-6 text-white/40">
-        <a href="https://www.instagram.com/actiivagency07/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+        <a href="https://www.instagram.com/actiiv.agency/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
         <button 
           onClick={() => window.location.href = 'mailto:actiivagency07@gmail.com'}
           className="hover:text-white transition-colors bg-none border-none cursor-pointer p-0"
