@@ -62,7 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative sticky top-0 left-0 right-0 z-50 py-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 py-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center glass rounded-full py-4 px-8 mx-4 md:mx-auto flowy-bg border-white/5 shadow-2xl shadow-accent/5">
         <motion.a 
           href="/"
@@ -681,7 +681,7 @@ export default function App() {
   return (
     <div className="relative topo-bg">
       <Navbar />
-      <main>
+      <main className="pt-28">
         <Hero />
         <About />
         <Skills />
