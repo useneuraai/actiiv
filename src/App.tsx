@@ -334,38 +334,58 @@ const Projects = () => {
   const marqueeProjects = [...projects, ...projects];
 
   return (
-    <section id="projects" className="scroll-mt-28 py-20 md:py-32 overflow-hidden">
-      <div className="px-6 md:px-12 max-w-7xl mx-auto mb-16">
-        <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">Selected Works</h2>
-        <p className="text-white/60 max-w-md">A collection of projects where we've pushed the boundaries of what's possible on the web.</p>
-      </div>
+    <section id="projects" className="scroll-mt-28 py-20 md:py-32 bg-white/5">
+      <div className="px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="mb-14 max-w-3xl">
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.3em] text-accent mb-4">
+            Portfolio
+          </span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Featured projects</h2>
+          <p className="text-white/70 text-base md:text-lg leading-relaxed">
+            A curated selection of recent work that blends clean design, fast performance, and real business impact.
+          </p>
+        </div>
 
-      <div className="relative flex overflow-hidden pb-12">
-        <div className="flex animate-marquee whitespace-nowrap gap-6 md:gap-8 px-4">
-          {marqueeProjects.map((project, i) => (
+        <div className="grid gap-8 lg:grid-cols-2">
+          {projects.map((project, i) => (
             <motion.div
-              key={`${project.name}-${i}`}
-              whileHover={{ scale: 1.05, zIndex: 10 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="w-[300px] md:w-[450px] flex-shrink-0 group cursor-pointer"
+              key={project.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className="group overflow-hidden rounded-[32px] border border-white/10 bg-[#09090b]/80 shadow-2xl shadow-black/30"
             >
-              <div className="aspect-[16/10] bg-white/5 rounded-3xl overflow-hidden mb-6 relative" style={{ backgroundImage: `url(${project.image})`, backgroundSize: "cover", backgroundPosition: "center" }}>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <div className="flex gap-4">
-                    <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center hover:bg-accent hover:text-white transition-colors">
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-                <div className="absolute top-6 left-6">
-                  <span className="px-3 py-1 rounded-full bg-accent/20 text-accent text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm border border-accent/20">
+              <div className="relative overflow-hidden aspect-[16/10]">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-white/70">
                     {project.tag}
                   </span>
+                  <h3 className="mt-4 text-2xl font-semibold text-white">{project.name}</h3>
                 </div>
               </div>
-              <h3 className="text-xl md:text-2xl font-display font-bold mb-2 group-hover:text-accent transition-colors">{project.name}</h3>
-              <p className="text-white/60 text-xs md:text-sm mb-4 line-clamp-2 whitespace-normal">{project.description}</p>
-              <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest">{project.stack}</p>
+
+              <div className="p-8 space-y-5">
+                <p className="text-sm leading-relaxed text-white/70">{project.description}</p>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">{project.stack}</span>
+                  <a
+                    href={project.links.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] text-black transition hover:bg-accent/90"
+                  >
+                    View live
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
