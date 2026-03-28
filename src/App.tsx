@@ -62,7 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-50 py-8">
+    <nav className="relative sticky top-0 left-0 right-0 z-50 py-8">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center glass rounded-full py-4 px-8 mx-4 md:mx-auto flowy-bg border-white/5 shadow-2xl shadow-accent/5">
         <motion.a 
           href="/"
@@ -117,7 +117,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t-0 rounded-b-3xl mx-4 mt-2 overflow-hidden flowy-bg"
+            className="md:hidden glass border-t-0 rounded-b-3xl mx-4 mt-2 overflow-hidden flowy-bg absolute left-0 right-0 top-full z-50"
           >
             <div className="flex flex-col p-8 gap-6">
               {navLinks.map((link) => (
@@ -305,7 +305,7 @@ const Projects = () => {
       links: { live: "https://useneura.xyz"}
     },
     {
-      name: "Sree Narayana Guru School",
+      name: "Sree Narayana Guru Matric Hr Sec School",
       tag: "School Website",
       description: "A high-performance website for a local school, featuring dynamic content management and a modern design.",
       stack: "Wordpress · PHP · Elementor",
