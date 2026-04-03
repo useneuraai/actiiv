@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect, type MouseEvent } from "react";
 import neuraaiImg from "../assets/neuraai.png";
-import sngschoolImg from "../assets/sngschool.png";
+import luminaImg from "../assets/lumina.png";
 import realestateImg from "../assets/realestate.png";
 import dentoImg from "../assets/dento.png";
 
@@ -296,21 +296,14 @@ const Skills = () => {
 
 const Projects = () => {
   const projects = [
+    
     {
-      name: "Neura AI",
-      tag: "Full stack web app for AI agents",
-      description: "A platform for building and deploying AI agents that can perform complex tasks across the web, using natural language prompts.",
-      stack: "Node.js · TypeScript · Tailwind CSS",
-      image: neuraaiImg,
-      links: { live: "https://useneura.xyz"}
-    },
-    {
-      name: "Sree Narayana Guru Matric Hr Sec School",
-      tag: "School Website",
-      description: "A high-performance website for a local school, featuring dynamic content management and a modern design.",
-      stack: "Wordpress · PHP · Elementor",
-      image: sngschoolImg,
-      links: { live: "https://sngmhskpm.wordpress.com/" }
+      name: "Lumina Streetwear",
+      tag: "E-Commerce Store",
+      description: "A bold, modern streetwear e-commerce storefront with a dark aesthetic, smooth animations, and a seamless shopping experience.",
+      stack: "Next.js · TypeScript · Tailwind CSS",
+      image: luminaImg,
+      links: { live: "https://lumina-streetwear.vercel.app/" }
     },
     {
       name: "Real Estate Website",
@@ -319,6 +312,14 @@ const Projects = () => {
       stack: "Next.js · TypeScript · Firebase",
       image: realestateImg,
       links: { live: "https://real-estate-demoweb.vercel.app/"}
+    },
+    {
+      name: "Neura AI",
+      tag: "Full stack web app for AI agents",
+      description: "A platform for building and deploying AI agents that can perform complex tasks across the web, using natural language prompts.",
+      stack: "Node.js · TypeScript · Tailwind CSS",
+      image: neuraaiImg,
+      links: { live: "https://useneura.xyz"}
     },
     {
       name: "Dento",
