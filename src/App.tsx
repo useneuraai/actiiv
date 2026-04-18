@@ -322,12 +322,12 @@ const Projects = () => {
       links: { live: "https://useneura.xyz"}
     },
     {
-      name: "Dento",
+      name: "Bright Smile Dental",
       tag: "Dental Clinic Website",
       description: "A sleek, responsive website for a dental clinic, featuring patient testimonials and an easy-to-use appointment booking system.",
       stack: "Next.js · Supabase · Tailwind",
       image: dentoImg,
-      links: { live: "https://dev-dentoclinic.pantheonsite.io/" }
+      links: { live: "https://app-khaki-zeta-64.vercel.app" }
     }
   ];
 
