@@ -440,7 +440,7 @@ const Pricing = () => {
     },
     {
       name: "Business",
-      price: "Rs.5999",
+      price: "Rs.7999",
       bestFor: "small businesses wanting a full website with multiple pages.",
       features: [
         "Up to 5 pages (Home, About, Services, Blog, Contact)",
